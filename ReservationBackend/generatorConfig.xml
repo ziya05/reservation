@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+  <context id="mariadbContext" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+  	<property name="autoDelimitKeywords" value="true"/>
+  	<property name="beginningDelimiter" value="`"/>
+  	<property name="endingDelimiter" value="`"/>
+  	
+  	<plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+  		<property name="mappers" value="com.ziya05.reservation.backend.utils.MyMapper" />
+  	</plugin>
+  
+    <jdbcConnection connectionURL="jdbc:mariadb://127.0.0.1:3360/reservation" 
+    	driverClass="org.mariadb.jdbc.Driver" 
+    	password="_Yuncai05!Sb" 
+    	userId="root" />
+    	
+    <javaModelGenerator 
+    	targetPackage="com.ziya05.reservation.backend.pojo"
+     	targetProject="src\main\java\" />
+    
+    <sqlMapGenerator 
+    	targetPackage="mybatis.mapper" 
+    	targetProject="src\main\resources\" />
+    
+    <javaClientGenerator 
+    	targetPackage="com.ziya05.reservation.backend.mapper" 
+    	targetProject="src\main\java\" 
+    	type="XMLMAPPER" />
+    
+    <!-- <table tableName="user">
+    	<generatedKey column="id" sqlStatement="mysql" identity="true" />
+    	<columnOverride column="sex" property="gender"></columnOverride>
+    	<ignoreColumn column="createtime"></ignoreColumn>
+    </table> -->
+    <table tableName="consultant"></table>
+    <table tableName="patient"></table>
+    <table tableName="information"></table>
+    <table tableName="introducation"></table>
+  </context>
+</generatorConfiguration>

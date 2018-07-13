@@ -1,0 +1,78 @@
+<swiper class="container" vertical="true">
+  <swiper-item class="panel">
+    <swiper class="sub-container">
+       <swiper-item class="panel index">
+          <image class="index-bg" src="../../images/bg.jpg" />
+          <view class="newest-info-panel center">
+              <view wx:if="{{ifGetUserInfo}}" class="newest-info">
+                 您还没有预约信息
+               </view>
+               <view wx:else class="newest-info login-btn" bindtap="login">
+                您还没有登录， 请点击我登录
+               </view>
+          </view>
+          <view class="operation-panel center">
+            <navigator url="../reservation/reservation" class="nav-btn">马上预约</navigator>
+          </view>
+       </swiper-item>
+        <swiper-item class="panel consultant">
+            <view class="sub-container">
+                <view class="sub-container-title">
+                    咨询师列表
+                </view>
+                <view class="status-remark">
+                  <text class="ib status-text">本周可约</text>
+                  <view class="booked-status-show ib booked-status-0"></view>
+                  <text class="ib status-text">下周可约</text>
+                  <view class="booked-status-show ib booked-status-1"></view>
+                  <text class="ib status-text">近周可约</text>
+                  <view class="booked-status-show ib booked-status-2"></view>
+                  <text class="ib status-text">近周不可约</text>
+                  <view class="booked-status-show ib booked-status-3"></view>
+                </view>
+                <scroll-view class="consultant-lst" scroll-y="true">
+                    <view wx:for="{{consultantItems}}" class="consultant-item" 
+                    data-id="{{item.id}}" bindtap="showConsultant">
+                       <view class="img-container ib">
+                          <image src="{{item.profile}}" class="consultant-img" />
+                       </view>
+                       <view class="consultant-info ib">
+                          <view class="consultant-info-line">
+                            <view class="ib consultant-base">{{item.name}}</view>
+                            <view class="ib consultant-base">
+                              <image wx:if="{{item.gender}}" src="../../images/woman.png" class="consultant-gender"/>
+                              <image wx:else src="../../images/man.png"  class="consultant-gender" />
+                            </view>
+                            <view class="ib consultant-base">{{item.age}}</view>
+                            <view class="ib booked-status {{item.status}}"></view>
+                          </view>
+                          <view class="consultant-info-line">
+                            {{item.qualification}}
+                          </view>
+                          <view class="consultant-info-line">
+                            <view wx:for="{{item.goodAt}}"  wx:for-item="goodAt"  class="ib good-block">
+                              {{goodAt}}
+                            </view>
+                          </view>
+                       </view>
+                    </view>
+                </scroll-view>
+            </view>
+        </swiper-item>
+    </swiper>
+  </swiper-item>
+   <swiper-item class="panel intro">
+      <swiper class="sub-container" indicator-dots="true" >
+          <block wx:for="{{introItems}}">
+              <swiper-item class="panel intro-item-panel">
+                  <view class="intro-item-view">
+                      <image class="intro-img" src="{{  item.img }}" />
+                    <view class="intro-desc">
+                        <text class="intro-desc-text">{{item.description}}</text>
+                    </view>
+                  </view>
+              </swiper-item>
+          </block>
+      </swiper>
+   </swiper-item>
+</swiper>

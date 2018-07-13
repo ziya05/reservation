@@ -1,0 +1,30 @@
+ <view class="container">
+    <view class="info-picker-container">
+      <picker-view indicator-class="info-picker-item" class="info-picker"
+        bindchange="bindChange" value="0">
+        <picker-view-column>
+          <view class="info-item" wx:for="{{items}}">
+            <image src="{{item.profile}}" class="info-item-profile"/>
+            <text class="info-item-text info-item-name"> {{item.name}}</text>
+            <text class="info-item-text info-item-date">{{item.date}}</text>
+            <text class="info-item-text info-item-time">{{item.beginTime}}-{{item.endTime}}</text>
+          </view>
+        </picker-view-column>
+      </picker-view>
+    </view>
+    <view class="selected-container">
+        <view class="selected-title">您将预约：</view>
+        <view class="ib selected-left">
+          <image src="{{selected.profile}}" class="selected-profile selected-attr" />
+          <text class="selected-attr selected-name">{{selected.name}}</text>
+        </view>
+        <view class="ib selected-right">
+          <text class="selected-attr selected-date">预约日期：{{selected.date}}</text>
+          <text class="selected-attr selected-begin">开始时间：{{selected.beginTime}}</text>
+          <text class="selected-attr selected-end">结束时间：{{selected.endTime}}</text>
+        </view>
+    </view>
+    <view class="oper-panel">
+      <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">确定</button>
+    </view>
+</view> 

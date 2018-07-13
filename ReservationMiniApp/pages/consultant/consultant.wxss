@@ -1,0 +1,146 @@
+.base-info-container {
+  width: 100%;
+  padding: 1vh 5vh;
+  background-color: #03a9f4;
+}
+.profile-container {
+  vertical-align: top;
+}
+.profile {
+  width:10vh;
+  height:10vh;
+  border-radius:10vh;
+}
+.name {
+  line-height: 2;
+}
+.gender {
+  width: 3vh;
+  height: 3vh;
+}
+.age {
+  font-size: 25rpx;
+}
+.base-line {
+  font-size: 25rpx;
+}
+
+/* 以下为扩展部分样式 */
+.main-info-container {
+  width: 100%;
+  height: 85vh;
+  padding: 1vh;
+}
+.scroll-container {
+  height: 90%;
+}
+.info-block {
+  padding:2vh 0;
+  border-bottom:1rpx solid #ebebeb;
+}
+.info-title {
+  line-height: 2.5;
+}
+.info-text {
+  font-size:28rpx;
+  color:#333;
+  line-height:1.8;
+  letter-spacing:1px;
+}
+
+.info-goodat-block {
+
+}
+
+.good-block {
+  margin: 0 1vh 1vh 0;
+  padding:6rpx 10rpx;
+  border-radius:10rpx;
+  background-color: #03a9f4;
+  color: #fff;
+}
+
+/* 以下为开放时段部分样式 */
+.swiper-item-title {
+  font-size: 25rpx;
+}
+
+.week-block {
+  margin: 2vh 0;
+  padding: 2vh 0;
+  font-size: 23rpx;
+  border-top: 1rpx solid #ebebeb;
+}
+
+.day-block {
+  vertical-align: top;
+  text-align: center;
+  width: 8.5vh;
+  margin-right: 0;
+  padding: 0 0.5vh;
+}
+
+.day-title {
+
+}
+
+.day-of-week {
+  margin: 1vh 0;
+  font-weight: 600;
+}
+
+.day {
+  color: #ddd;
+}
+
+.duration-lst {
+  margin: 1vh 0;
+}
+
+.duration-block {
+  margin: 2vh 0;
+  line-height: 2;
+  background-color: #8bc34a;
+  border-radius: 1vh 0 1vh 0;
+  color: #fff;
+} 
+
+.duration-begin {
+
+}
+
+.duration-split {
+
+}
+
+.duration-end {
+
+}
+
+/* .day-status-0 {
+
+}
+
+.day-status-1 {
+
+} */
+
+.day-status-2::after,
+.day-status-3::after {
+  display: inline-block;
+  width: 7.5vh;
+  margin: 1vh 0;
+  padding: 1vh 0;
+  color: #fff;
+  border-radius: 1vh 0 1vh 0;
+}
+
+.day-status-2::after {
+  content: "未开放";
+  background-color: #212121;
+}
+
+.day-status-3::after {
+  content: "约满";
+  background-color: #ff5252;
+}

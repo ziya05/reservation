@@ -1,0 +1,209 @@
+.container {
+  padding: 0;
+}
+
+.sub-container {
+  padding: 0;
+  height: 100vh;
+}
+
+.index {
+  width: 100vh;
+  height: 100vh;
+  position: relative;
+}
+
+.index-bg {
+  width: 100vh;
+  height: 100vh;
+  position: absolute;
+  z-index: -10;
+}
+
+.index::before, 
+.index::after,
+.intro::before,
+.consultant::before {
+  content: ".";
+  display: inline-block;
+  width: 5vh;
+  height: 5vh;
+  position: absolute;
+  background: #8bc34a;
+  border-radius: 3vh;
+  line-height: 20;
+  overflow: hidden;
+}
+
+.index::before {
+  height: 8vh;
+  left: 10vh;
+  bottom: -2.5vh;
+}
+
+.index::after{
+  width: 8vh;
+  top: 10vh;
+  right: -2.5vh;
+}
+
+.intro::before{
+  top:-2.5vh;
+  left: 10vh;
+}
+
+.consultant::before {
+  top: 10vh;
+  left: -2.5vh;
+}
+
+.newest-info-panel {
+  height: 70vh;
+}
+
+.newest-info {
+  padding: 20vh 10vh;
+}
+
+.login-btn {
+  
+}
+
+.nav-btn {
+  display:inline-block;
+  padding: 20rpx 60rpx;
+  border-radius: 40rpx;
+  background-color:  #8bc34a;
+  font: 600 30rpx  'Microsoft YaHei';
+}
+
+/* 以下为简介页面样式 */
+.intro-item-view {
+  margin: 3vh;
+  padding: 3vh;
+  box-shadow:3px 0 #f8f8f8, -3px 0 #f8f8f8, 0 8px #f8f8f8;
+  height:90vh;
+  overflow-y:hidden;
+  border-radius:20px;
+}
+
+.intro-img {
+  width: 100%;
+ height: 35vh;
+}
+
+.intro-desc {
+  color: #aaa;
+  margin: 1vh;
+  padding-top:3vh;
+  height: 45vh;
+  font-size:28rpx;
+  letter-spacing: 1px;
+  line-height:1.8;
+  overflow-y:hidden;
+}
+
+/* 以下为咨询师页面样式 */
+.sub-container-title {
+  margin:1vh 5vh;
+  line-height:3;
+  background-color:#0288d1;
+  border-top-right-radius:4vh;
+  border-bottom-right-radius:4vh;
+  padding-left:2vh;
+  color:#212121;
+  font-size:20rpx;
+  letter-spacing:2px;
+}
+
+.status-remark {
+  font-size:20rpx;
+  margin:3vh 5vh;
+  line-height: 1.8;
+}
+
+.status-text {
+  width: 10vh;
+}
+
+.consultant-lst {
+  width: 53vh;
+  height: 80vh;
+  margin: 0 5vh;
+}
+
+.consultant-item {
+  padding: 2vh 0;
+  border-bottom: 1rpx solid #ebebeb;
+}
+
+.consultant-info {
+  position: relative;
+  height: 100%;
+  width: 75%;
+  margin-right: 0;
+  overflow: hidden;
+  font-size: 25rpx;
+}
+
+.img-container {
+  vertical-align: top;
+}
+
+.consultant-img {
+  width: 10vh;
+  height: 10vh;
+  border-radius: 10vh;
+}
+
+.consultant-info-line {
+  line-height: 1.8;
+}
+
+.consultant-base {
+
+}
+
+.consultant-gender {
+  width: 3vh;
+  height: 3vh;
+}
+
+.booked-status,
+.booked-status-show {
+  width: 10vh;
+  height: 1vh;
+  transform:rotate(30deg);
+  position:absolute;
+  right:0;
+  color: #fff;
+}
+
+.booked-status-show {
+  transform: rotate(0deg);
+  position: relative;
+}
+
+.booked-status-0 {
+  background-color: #8bc34a;
+}
+
+.booked-status-1 {
+  background-color: #2196f3;
+}
+
+.booked-status-2 {
+  background-color: #212121;
+}
+
+.booked-status-3 {
+  background-color: #d32f2f;
+}
+
+.good-block {
+  margin: 0 1vh 1vh 0;
+  padding:6rpx 10rpx;
+  border-radius:10rpx;
+  background-color: #03a9f4;
+  color: #fff;
+}

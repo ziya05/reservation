@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/consultant/consultant",
+    "pages/reservation/reservation",
+    "pages/user/user"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "心理咨询预约系统",
+    "navigationBarTextStyle": "black"
+  }
+}

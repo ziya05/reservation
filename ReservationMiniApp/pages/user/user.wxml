@@ -1,0 +1,27 @@
+<view class="container">
+ <view class="userInfo" wx:if="{{hasLogin}}">
+    <open-data type="userAvatarUrl"></open-data>
+    <open-data type="userNickName"></open-data>
+ </view>
+ <view class="userInfo" wx:else>
+  <button open-type="getUserInfo"
+    bindgetuserinfo="getUserInfo">登录授权</button>
+ </view>
+ <view class="phonePanel">
+  <view class="current-phone">绑定电话：{{phoneNumber}}</view>
+  <view class="change-phone-panel">
+    <view class="line">
+      <text>新的电话：</text>
+      <input type="number" />
+      <button >获取验证码</button>
+    </view>
+    <view class="line">
+      <text>输入验证码：</text>
+      <input type="number" />
+    </view>
+    <view class="line">
+      <button>确定</button>
+    </view>
+  </view>
+ </view>
+</view>

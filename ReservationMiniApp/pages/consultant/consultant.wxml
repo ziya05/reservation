@@ -1,0 +1,57 @@
+<view class="container">
+  <view class="base-info-container">
+    <view class="ib profile-container">
+      <image src="{{info.profile}}" class="profile"/>
+    </view>
+    <view class="ib">
+      <view class="ib name">{{info.name}}</view>
+      <view class="ib">
+        <image wx:if="{{info.gender}}" src="../../images/woman.png" class="gender"/>
+        <image wx:else src="../../images/man.png"  class="gender" />
+      </view>
+      <view class="ib age">{{info.age}}</view>
+      <view class="base-line">{{info.qualification}}</view>
+    </view>
+  </view>
+  <swiper class="main-info-container" indicator-dots="true">
+    <swiper-item>
+      <scroll-view class="scroll-container" scroll-y="true">
+        <view class= "info-block">
+          <view class="info-title">个人介绍</view>
+          <text class="info-text">{{info.introducation}}</text>
+        </view>
+        <view class= "info-block">
+          <view class="info-title">擅长方向</view>
+          <view class="info-goodat-block info-text">
+            <view wx:for="{{info.goodAt}}" class="ib good-block">
+            {{item}}
+            </view>
+          </view>
+        </view>
+        <view class= "info-block">
+          <view class="info-title">专业资质</view>
+          <text class="info-text">{{info.qualification}}</text>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view class="scroll-container" scroll-y="true">
+          <view class="swiper-item-title">点击<view class="duration-block ib">时间段</view>预约</view>
+          <view class="week-block" wx:for="{{info.infoItems}}" wx:for-item="week">
+            <view class="ib day-block" wx:for="{{week.items}}" wx:for-item="day">
+              <view class="day-title">星期</view>
+              <view class="day-of-week">{{day.dayOfWeek}}</view>
+              <view class="day">{{day.day}}</view>
+              <view class="duration-lst day-status-{{day.status}}">
+                <view class="duration-block" wx:for="{{day.items}}" wx:for-item="duration">
+                  <view class="duration-begin">{{duration.beginTime}}</view>
+                  <view class="duration-split">-</view>
+                  <view class="duration-end">{{duration.endTime}}</view>
+                </view>
+              </view>
+            </view>
+          </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>
